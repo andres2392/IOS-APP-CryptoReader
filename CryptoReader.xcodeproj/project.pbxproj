@@ -13,6 +13,11 @@
 		7EB7DFCA28AD77C10072C7E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7DFC928AD77C10072C7E4 /* Preview Assets.xcassets */; };
 		7EB7DFCC28AD77C10072C7E4 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7DFCB28AD77C10072C7E4 /* Persistence.swift */; };
 		7EB7DFCF28AD77C10072C7E4 /* CryptoReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7DFCD28AD77C10072C7E4 /* CryptoReader.xcdatamodeld */; };
+		7EB7DFD828AD82D00072C7E4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7DFD728AD82D00072C7E4 /* Home.swift */; };
+		7EB7DFDA28AD88540072C7E4 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7DFD928AD88540072C7E4 /* LineGraph.swift */; };
+		7EB7DFDC28AD88760072C7E4 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7DFDB28AD88760072C7E4 /* CryptoModel.swift */; };
+		7EB7DFDF28AD89680072C7E4 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7DFDE28AD89680072C7E4 /* AppViewModel.swift */; };
+		7EB7DFE228AD8C490072C7E4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB7DFE128AD8C490072C7E4 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,10 @@
 		7EB7DFC928AD77C10072C7E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7EB7DFCB28AD77C10072C7E4 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7EB7DFCE28AD77C10072C7E4 /* CryptoReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CryptoReader.xcdatamodel; sourceTree = "<group>"; };
+		7EB7DFD728AD82D00072C7E4 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		7EB7DFD928AD88540072C7E4 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		7EB7DFDB28AD88760072C7E4 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		7EB7DFDE28AD89680072C7E4 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB7DFE228AD8C490072C7E4 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +65,9 @@
 		7EB7DFC128AD77BF0072C7E4 /* CryptoReader */ = {
 			isa = PBXGroup;
 			children = (
+				7EB7DFDD28AD89550072C7E4 /* ViewModel */,
+				7EB7DFD628AD82C50072C7E4 /* View */,
+				7EB7DFD528AD82BF0072C7E4 /* Model */,
 				7EB7DFC228AD77BF0072C7E4 /* CryptoReaderApp.swift */,
 				7EB7DFC428AD77BF0072C7E4 /* ContentView.swift */,
 				7EB7DFC628AD77C10072C7E4 /* Assets.xcassets */,
@@ -73,6 +86,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7EB7DFD528AD82BF0072C7E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EB7DFDB28AD88760072C7E4 /* CryptoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7EB7DFD628AD82C50072C7E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7EB7DFD928AD88540072C7E4 /* LineGraph.swift */,
+				7EB7DFD728AD82D00072C7E4 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7EB7DFDD28AD89550072C7E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7EB7DFDE28AD89680072C7E4 /* AppViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +127,9 @@
 			dependencies = (
 			);
 			name = CryptoReader;
+			packageProductDependencies = (
+				7EB7DFE128AD8C490072C7E4 /* SDWebImageSwiftUI */,
+			);
 			productName = CryptoReader;
 			productReference = 7EB7DFBF28AD77BF0072C7E4 /* CryptoReader.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 7EB7DFB628AD77BF0072C7E4;
+			packageReferences = (
+				7EB7DFE028AD8C490072C7E4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 7EB7DFC028AD77BF0072C7E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,7 +189,11 @@
 			files = (
 				7EB7DFCC28AD77C10072C7E4 /* Persistence.swift in Sources */,
 				7EB7DFCF28AD77C10072C7E4 /* CryptoReader.xcdatamodeld in Sources */,
+				7EB7DFDF28AD89680072C7E4 /* AppViewModel.swift in Sources */,
+				7EB7DFDC28AD88760072C7E4 /* CryptoModel.swift in Sources */,
+				7EB7DFD828AD82D00072C7E4 /* Home.swift in Sources */,
 				7EB7DFC528AD77BF0072C7E4 /* ContentView.swift in Sources */,
+				7EB7DFDA28AD88540072C7E4 /* LineGraph.swift in Sources */,
 				7EB7DFC328AD77BF0072C7E4 /* CryptoReaderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +393,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7EB7DFE028AD8C490072C7E4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7EB7DFE128AD8C490072C7E4 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EB7DFE028AD8C490072C7E4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7EB7DFCD28AD77C10072C7E4 /* CryptoReader.xcdatamodeld */ = {
